@@ -1,0 +1,172 @@
+<!-- ================================= -->
+<!-- PÁGINA 2 - localizacao.html -->
+<!-- ================================= -->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <title> Dados - h.Appy</title>
+
+    <style>
+
+        body{
+            background:#f5f7fb;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .topo{
+            background: linear-gradient(135deg,#18c4d6,#0eb2d3);
+            padding:20px;
+            color:white;
+        }
+
+        .logo{
+            font-size:35px;
+            font-weight:bold;
+        }
+
+        .container-principal{
+            margin-top:50px;
+        }
+
+        .mapa{
+            border-radius:20px;
+            overflow:hidden;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .card-form{
+            background:white;
+            padding:30px;
+            border-radius:20px;
+            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+        }
+
+        .form-control{
+            height:55px;
+            border-radius:12px;
+        }
+
+        textarea.form-control{
+            height:120px;
+        }
+
+        .btn-enviar{
+            background:#18c4d6;
+            color:white;
+            border:none;
+            padding:15px;
+            border-radius:12px;
+            width:100%;
+            font-size:18px;
+            transition:0.3s;
+        }
+
+        .btn-enviar:hover{
+            background:#0eb2d3;
+        }
+
+    </style>
+
+</head>
+<body>
+
+    <!-- TOPO -->
+    <div class="topo">
+
+        <div class="container d-flex justify-content-between align-items-center">
+
+            <div class="logo">
+                😊 h.Appy
+            </div>
+
+            <div>
+                Rio do Sul - Santa Catarina
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- CONTEÚDO -->
+    <div class="container container-principal">
+
+        <div class="row g-4 align-items-center">
+
+            <!-- MAPA -->
+            <div class="col-lg-7">
+
+                <div class="mapa">
+
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28436.49120368434!2d-49.652!3d-27.214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dfaf03d4d7e30f%3A0x788fe8c4d34f02b8!2sRio%20do%20Sul%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
+                        width="100%"
+                        height="500"
+                        style="border:0;"
+                        allowfullscreen=""
+                        loading="lazy">
+
+                    </iframe>
+
+                </div>
+
+            </div>
+
+            <!-- FORMULÁRIO -->
+            <div class="col-lg-5">
+
+                <div class="card-form">
+
+                    <h2 class="mb-4">
+                        Dados Pessoais
+                    </h2>
+
+                    <form>
+
+                        <div class="mb-3">
+                            <input type="text"
+                            class="form-control"
+                            placeholder="Nome completo">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="email"
+                            class="form-control"
+                            placeholder="Seu e-mail">
+                        </div>
+
+                        <div class="mb-3">
+                            <input type="text"
+                            class="form-control"
+                            placeholder="Telefone">
+                        </div>
+
+                        <div class="mb-3">
+                            <textarea
+                            class="form-control"
+                            placeholder="Digite uma mensagem"></textarea>
+                        </div>
+
+                        <button class="btn-enviar">
+                            Enviar
+                        </button>
+
+                    </form>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+</html>
