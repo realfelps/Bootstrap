@@ -1,172 +1,155 @@
-<!-- ================================= -->
-<!-- PÁGINA 2 - localizacao.html -->
-<!-- ================================= -->
-
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dados - hAppy</title>
 
-    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
 
-    <title> Dados - h.Appy</title>
-
     <style>
-
-        body{
-            background:#f5f7fb;
-            font-family: Arial, Helvetica, sans-serif;
+        
+        body {
+            background-color: #f5f7fb;
         }
 
-        .topo{
-            background: linear-gradient(135deg,#18c4d6,#0eb2d3);
-            padding:20px;
-            color:white;
+        .bg-gradient-happy {
+            background: linear-gradient(135deg, #18c4d6, #0eb2d3);
         }
 
-        .logo{
-            font-size:35px;
-            font-weight:bold;
+        .bg-happy {
+            background-color: #18c4d6;
         }
 
-        .container-principal{
-            margin-top:50px;
+        
+        .form-control-custom {
+            height: 55px;
+        }
+        
+        textarea.form-control-custom {
+            height: 120px;
         }
 
-        .mapa{
-            border-radius:20px;
-            overflow:hidden;
-            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+        .btn-happy {
+            background-color: #18c4d6;
+            transition: 0.3s;
         }
 
-        .card-form{
-            background:white;
-            padding:30px;
-            border-radius:20px;
-            box-shadow:0px 5px 15px rgba(0,0,0,0.1);
+        .btn-happy:hover {
+            background-color: #0eb2d3;
+            color: white;
         }
 
-        .form-control{
-            height:55px;
-            border-radius:12px;
-        }
+.logo-animada {
+    display: inline-block;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    user-select: none; 
+}
 
-        textarea.form-control{
-            height:120px;
-        }
+.logo-animada:hover {
+    transform: scale(1.1) translateY(-3px);
+}
 
-        .btn-enviar{
-            background:#18c4d6;
-            color:white;
-            border:none;
-            padding:15px;
-            border-radius:12px;
-            width:100%;
-            font-size:18px;
-            transition:0.3s;
-        }
 
-        .btn-enviar:hover{
-            background:#0eb2d3;
-        }
+.logo-animada span {
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-animada:hover span {
+    animation: puloEmoji 0.6s ease infinite alternate;
+}
+
+@keyframes puloEmoji {
+    from { transform: translateY(0); }
+    to { transform: translateY(-5px); }
+}
+
 
     </style>
-
 </head>
 <body>
 
-    <!-- TOPO -->
-    <div class="topo">
-
+    <header class="bg-gradient-happy py-3 shadow-sm">
         <div class="container d-flex justify-content-between align-items-center">
-
-            <div class="logo">
-                😊 h.Appy
+            <div class="fs-2 fw-bold text-dark logo-animada">
+                <span>😊</span> hAppy
             </div>
-
-            <div>
+            <div class="fw-medium text-white">
                 Rio do Sul - Santa Catarina
             </div>
+        </div>
+    </header>
 
+    <main class="container my-5">
+
+        <div class="ratio ratio-21x9 mb-5 shadow-sm rounded-4 overflow-hidden">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3550.000000000000!2d-49.64!3d-27.21!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjfCsDEyJzM2LjAiUyA0OcKwMzgnMjQuMCJX!5e0!3m2!1spt-BR!2sbr!4v123456789"
+                style="border:0;"
+                allowfullscreen=""
+                loading="lazy">
+            </iframe>
         </div>
 
-    </div>
+        <form action="#">
+            
+            <div class="pessoa-container">
+                <script>
+                    
+                    for(let i=1; i<=3; i++) {
+                        document.write(`
+                            <div class="card shadow-sm border-0 rounded-4 p-4 mb-4 bg-white">
+                                <div class="bg-happy text-white px-3 py-2 rounded-3 fw-bold mb-4 fs-5 w-auto d-inline-block">
+                                    Pessoa ${i}
+                                </div>
 
-    <!-- CONTEÚDO -->
-    <div class="container container-principal">
-
-        <div class="row g-4 align-items-center">
-
-            <!-- MAPA -->
-            <div class="col-lg-7">
-
-                <div class="mapa">
-
-                    <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d28436.49120368434!2d-49.652!3d-27.214!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94dfaf03d4d7e30f%3A0x788fe8c4d34f02b8!2sRio%20do%20Sul%2C%20SC!5e0!3m2!1spt-BR!2sbr!4v1710000000000!5m2!1spt-BR!2sbr"
-                        width="100%"
-                        height="500"
-                        style="border:0;"
-                        allowfullscreen=""
-                        loading="lazy">
-
-                    </iframe>
-
-                </div>
-
+                                <div class="row g-3">
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control form-control-custom rounded-3" placeholder="Nome completo">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="date" class="form-control form-control-custom rounded-3">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="email" class="form-control form-control-custom rounded-3" placeholder="Seu e-mail">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control form-control-custom rounded-3" placeholder="Telefone">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <input type="text" class="form-control form-control-custom rounded-3" placeholder="CPF">
+                                    </div>
+                                    <div class="col-md-6">
+                                        <select class="form-select form-control-custom rounded-3">
+                                            <option selected disabled>Sexo</option>
+                                            <option>Masculino</option>
+                                            <option>Feminino</option>
+                                            <option>Outro</option>
+                                        </select>
+                                    </div>
+                                    <div class="col-12">
+                                        <input type="text" class="form-control form-control-custom rounded-3" placeholder="Endereço completo">
+                                    </div>
+                                    <div class="col-12">
+                                        <textarea class="form-control form-control-custom rounded-3" placeholder="Observações"></textarea>
+                                    </div>
+                                </div>
+                            </div>
+                        `);
+                    }
+                </script>
             </div>
 
-            <!-- FORMULÁRIO -->
-            <div class="col-lg-5">
+            <button type="submit" class="btn btn-happy text-white w-100 py-3 rounded-3 fs-5 fw-bold shadow-sm mt-3 mb-5">
+                Enviar Dados
+            </button>
 
-                <div class="card-form">
+        </form>
 
-                    <h2 class="mb-4">
-                        Dados Pessoais
-                    </h2>
+    </main>
 
-                    <form>
-
-                        <div class="mb-3">
-                            <input type="text"
-                            class="form-control"
-                            placeholder="Nome completo">
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="email"
-                            class="form-control"
-                            placeholder="Seu e-mail">
-                        </div>
-
-                        <div class="mb-3">
-                            <input type="text"
-                            class="form-control"
-                            placeholder="Telefone">
-                        </div>
-
-                        <div class="mb-3">
-                            <textarea
-                            class="form-control"
-                            placeholder="Digite uma mensagem"></textarea>
-                        </div>
-
-                        <button class="btn-enviar">
-                            Enviar
-                        </button>
-
-                    </form>
-
-                </div>
-
-            </div>
-
-        </div>
-
-    </div>
-
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
